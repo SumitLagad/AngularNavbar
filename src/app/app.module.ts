@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { DropdownDirective } from './directive/dropdown-directive';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { DropdownDirective } from './directive/dropdown-directive';
     DropdownDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ClickOutsideModule
   ],
   providers: [],
   bootstrap: [AppComponent]

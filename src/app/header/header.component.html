@@ -4,16 +4,18 @@
 
   <!-- Links -->
   <ul class="navbar-nav">
-    <li class="nav-item" appDropdown>
+    <li class="nav-item" >
       <a class="nav-link" >Link 1</a>
     </li>
 
     <!-- Dropdown -->
-    <li class="nav-item dropdown" appDropdown>
+    <!-- click outside event used to detect outside event click when dropdown open or not
+          if dropdown list is open then call onClickedOutside() and hide the dropdown  -->
+    <li class="nav-item dropdown" appDropdown (clickOutside)="onClickedOutside($event)">
       <a class="nav-link dropdown-toggle"  id="navbardrop1" data-toggle="dropdown" >
         Dropdown link 1
       </a>
-      <div class="dropdown-menu">
+      <div class="dropdown-menu" >
         <a class="dropdown-item" href="#">Link 1</a>
         <a class="dropdown-item" href="#">Link 2</a>
         <a class="dropdown-item" href="#">Link 3</a>
@@ -21,7 +23,7 @@
     </li>
 
     <!-- Dropdown -->
-    <li class="nav-item dropdown" appDropdown>
+    <li class="nav-item dropdown" appDropdown (clickOutside)="onClickedOutside($event)">
       <a class="nav-link dropdown-toggle"  id="navbardrop2" data-toggle="dropdown" >
         Dropdown link 2
       </a>
